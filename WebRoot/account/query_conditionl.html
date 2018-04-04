@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>queryCondition.html</title>
+	
+    <meta name="keywords" content="keyword1,keyword2,keyword3">
+    <meta name="description" content="this is my page">
+    <meta name="content-type" content="text/html; charset=UTF-8">
+  </head>
+  
+  <body style="background-color:#d5e2e1">
+	<font color="#800000"></font><br> 
+	<form action="/RepairmentSystem/queryaccount" method="post" target="result">
+    	<table align="left" >
+    		<tr>
+            	<TD>维修单号</TD>
+           	  <td><INPUT type="text" name="fixno" value="" size="30" >&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                <td>维修人员：</td>
+            	<td >
+            	<INPUT type="text" name="fixname" value="" size="30">
+                &nbsp;&nbsp;&nbsp;&nbsp;</td>
+                <TD>接机日期：</TD>
+			   <TD><INPUT type="Date" name="fixtime" value="" size="30">&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+            </tr>
+    	</table>
+    </form>
+    <div align = "left"><button onclick="doQuery()">查询</button></div>
+  </body>
+  <script type = "text/javascript">
+  	function doQuery(){
+  		document.forms[0].submit();
+  	}
+  </script>
+</html>

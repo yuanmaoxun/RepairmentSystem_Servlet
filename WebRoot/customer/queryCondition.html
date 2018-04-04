@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>queryCondition.html</title>
+	
+    <meta name="keywords" content="keyword1,keyword2,keyword3">
+    <meta name="description" content="this is my page">
+    <meta name="content-type" content="text/html; charset=UTF-8">
+    
+
+  </head>
+  
+  <body style="background-color:#d5e2e1">
+  <br/> 
+	<form action ="/RepairmentSystem/customerservlet1" method="post" target="result">
+	
+    <table width="98%" border="0" align="center">
+    	<tr>
+          <td width="173" align="right">身份证明:</td>
+		  <td width="168" style="width: 151px; "><input type="text" name="cus_id"/></td>    
+          <td width="88"><button align="left" onclick="doQuery()">查询</button></td>
+          <td width="561"><a href="/RepairmentSystem/customer/register.html" target="work"> 增加客户信息</a></td>
+      </tr>
+     </table>
+  </form>
+  </body>
+  <script type="text/javascript">
+  	function doQuery()
+  	{
+  		document.forms[0].submit();
+  	}
+  </script>
+</html>

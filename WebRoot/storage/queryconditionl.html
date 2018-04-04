@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>queryConditionl.html</title>
+	
+    <meta name="keywords" content="keyword1,keyword2,keyword3">
+    <meta name="description" content="this is my page">
+    <meta name="content-type" content="text/html; charset=UTF-8">
+  </head>
+  
+  <body style="background-color:#d5e2e1">
+	<br>
+    <form action="/RepairmentSystem/querystorage" method="post" target="result">
+    	<table align="left" >
+    		<tr>
+            	<TD>备件名称：</TD>
+           	  <td><INPUT type="text" name="equname" value="" size="30" >&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                <TD>型&nbsp;&nbsp;&nbsp;&nbsp;号：</TD>
+			   <TD><INPUT type="text" name="equmodel" value="" size="30">&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+                <td>库存状态：</td>
+            	<td >
+                <select name="equcondition">
+                	<option>请选择</option>
+                    <option>正常</option>
+                    <option>临界</option>
+                    <option>警戒</option>
+                    <option>缺货</option>
+              </select>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            </tr>
+    	</table>
+    </form>
+    <div align = "left"><button onclick="doQuery()">查询</button></div>
+  </body>
+  <script type = "text/javascript">
+  	function doQuery(){
+  		document.forms[0].submit();
+  	}
+  </script>
+</html>

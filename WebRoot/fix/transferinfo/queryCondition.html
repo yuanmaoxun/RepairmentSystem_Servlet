@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>queryCondition.html</title>
+	
+    <meta name="keywords" content="keyword1,keyword2,keyword3">
+    <meta name="description" content="this is my page">
+    <meta name="content-type" content="text/html; charset=UTF-8">
+  </head>
+  <body style="background-color:#d5e2e1">
+    <br><form action="/RepairmentSystem/FixnoServlet" method="post" target="Result">
+    	<table align="left">
+    		<tr>
+    			<td>维修单号：</td>
+    			<td><input type="text" name="query_fixno"/></td>
+    			<td><button onclick="doQuery1()">查询</button></td>
+    		</tr>	
+    	</table>
+    </form>
+  </body>
+  <script type="text/javascript">
+  	function doQuery1(){
+  		document.forms[0].submit();
+  	}
+  </script>
+</html>

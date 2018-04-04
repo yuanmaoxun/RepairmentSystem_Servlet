@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>welcome.html</title>
+	
+    <meta name="keywords" content="keyword1,keyword2,keyword3">
+    <meta name="description" content="this is my page">
+    <meta name="content-type" content="text/html; charset=UTF-8">
+    
+   <meta name="keywords" content="" />
+	<meta name="description" content="" />
+
+<link rel="stylesheet" href="nivo-slider/themes/default/default.css" type="text/css" media="screen" />
+<link rel="stylesheet" type="text/css" href="styles.css" />
+<script src="js/jquery-1.7.1.min.js"></script>
+<script src="js/jquery.nivo.slider.js"></script>
+<script src="js/smooth-scroll.js"></script>
+<script src="js/jquery.prettyPhoto.js"></script>
+<script src="js/jquery.validate.js"></script>
+<script type="text/javascript" src="js/filter-gallery.js"></script>
+
+<script type="text/javascript">
+
+   $(document).ready(function()
+   {         
+      //
+      // jQuery SmoothScroll | Version 11-09-30
+      //
+
+      $('a[href*=#]').click(function() {
+
+         // skip SmoothScroll on links inside sliders or scroll boxes also using anchors or if there is a javascript call
+         if($(this).parent().hasClass('scrollable_navigation') || $(this).attr('href').indexOf('javascript')>-1) return;
+
+         // duration in ms
+         var duration=1000;
+
+         // easing values: swing | linear
+         var easing='swing';
+
+         // get / set parameters
+         var newHash=this.hash;
+         var oldLocation=window.location.href.replace(window.location.hash, '');
+         var newLocation=this;
+
+         // make sure it's the same location      
+         if(oldLocation+newHash==newLocation)
+         {
+            // get target
+            var target=$(this.hash+', a[name='+this.hash.slice(1)+']').offset().top;
+
+            // adjust target for anchors near the bottom of the page
+            if(target > $(document).height()-$(window).height()) target=$(document).height()-$(window).height();         
+
+            // set selector
+            if($.browser.safari) var animationSelector='body:not(:animated)';
+            else var animationSelector='html:not(:animated)';
+
+            // animate to target and set the hash to the window.location after the animation
+            $(animationSelector).animate({ scrollTop: target }, duration, easing, function() {
+
+               // add new hash to the browser location
+               window.location.href=newLocation;
+            });
+
+            // cancel default click action
+            return false;
+         }
+      });
+   });
+   
+</script>
+
+<!-- Nivo Slider -->
+    <script type="text/javascript">
+    $(window).load(function() {
+        $('#slider').nivoSlider();
+    });
+    </script>
+
+    <!-- PrettyPhoto Jquery Gallery -->
+    <script type="text/javascript">
+  $(document).ready(function(){
+    $("a[rel^='prettyPhoto']").prettyPhoto();
+  });
+</script>
+
+<!-- Jquery Form Validation -->
+<script type="text/javascript">
+	$(document).ready(function() {
+	  $("#commentForm").validate();
+});
+</script>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
+<body style="background-color:#d5e2e1">
+<div id="feature"><div class="inner">
+<font size="+3" color="#096" face="华文行楷">欢迎登录 设备维修管理系统</font>
+			<!-- Start Nivo Slider -->
+			<div class="slider">
+		        <div class="slider-wrapper theme-default">
+		             <div id="slider" class="nivoSlider">
+		              	<img src="nivo-slider/images/slide.png" alt="Happiness" width="750" height="250" />
+		              	<img src="nivo-slider/images/slide3.png" alt="Happiness" width="750" height="250" />
+		              	<img src="nivo-slider/images/slide4.png" alt="Happiness" width="750" height="250" />
+		              	<img src="nivo-slider/images/slide2.png" alt="Happiness" width="750" height="250" /> </div>
+              </div><!-- end slider -->
+    </div><!-- end slider wrapper -->  
+		  </div><!-- end slider -->
+		</div><!-- end inner --><!-- end about --><!-- end work --><!-- end wrapper -->
+</body>
+</html>

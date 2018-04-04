@@ -1,0 +1,80 @@
+<HTML><HEAD>
+<TITLE></TITLE>
+<META http-equiv=Content-Language content=zh-cn>
+<META http-equiv=Content-Type content="text/html; charset=UTF-8">
+<META content="MSHTML 5.50.4134.600" name=GENERATOR></HEAD>
+<link rel="stylesheet" href="style/style.css" type="text/css">
+<BODY leftmargin="0" topmargin="0" marginheight="0" marginwidth="0" style="background-color:#d5e2e1">
+<br>
+<table border="0" width="98%" align="center"><tr><td height='4'></td></tr></table>
+
+<TABLE width="98%" border=0 align="center">
+   <TR>
+     <TD width="100%" align="right"><FONT color=#493eb5>注:标有</FONT><FONT color=#FF0000> * </FONT><FONT color=#493eb5>的项必填&nbsp;</FONT></TD>
+   </TR>
+    <TR>
+     <TD width="100%">
+	<FORM name="addstorage" action="/RepairmentSystem/addstorage" method="post">
+		<TABLE borderColor=#f7f8c7 height=18 cellSpacing=0  borderColorDark=#f7f8c7 cellPadding=2 width="100%" bgColor=#f0f0f0   borderColorLight=#000000 border=1>
+		  <tr height="15" style="height:11.25pt">
+			<td height="15"  colspan="6" >
+			<table border="0" width="100%" >
+				<th>
+					<td align="center"><b>添加备件信息</b></font></td>
+				</th>
+			</table>
+			</td>
+		  </tr>
+             <TR>
+               <TD width="15%" height=13 align="right"><FONT color=#FF0000>*&nbsp;</FONT>备件名称：</TD>
+               <TD width="35%" height=13>
+					<input type = "text" name = "equname" size = "30" maxlength="50"/>
+			   </TD>
+			   <TD width="15%" height=13 align="right">型&nbsp;&nbsp;&nbsp;&nbsp;号：</TD>
+			   <TD width="35%" height=13><INPUT type = "text" name="equmodel" value="" size="30" maxlength="50"></TD>
+              </TR>
+             <TR>
+               <TD width="15%" height=13 align="right"><FONT color=#FF0000>*&nbsp;</FONT>单&nbsp;&nbsp;&nbsp;&nbsp;价：</TD>
+               <TD width="35%" height=13><INPUT type = "text" name="equcost" value="" size="30" maxlength="50"></TD>
+			   <TD width="15%" height=13 align="right"><FONT color=#FF0000>*&nbsp;</FONT>警戒数量：</TD>
+			   <TD width="35%" height=13><INPUT type = "text" name="equalternum" id ="alternum" value="" size="30" maxlength="50"></TD>
+             </TR>
+			 <TR>
+               <TD width="15%" height=13 align="right"><FONT color=#FF0000>*&nbsp;</FONT>数&nbsp;&nbsp;&nbsp;&nbsp;量：</TD>
+               <TD width="35%" height=13><INPUT type = "text" name="equnum" id = "num" onblur="showCondition()" onchange = "showCondition()" value="" size="30" maxlength="50"></TD>
+			   <TD width="15%" height=13 align="right"><FONT color=#FF0000>*&nbsp;</FONT>库存状态：</TD>
+			   <TD width="35%" height=13><span id="info"></span></TD>
+             </TR>
+              <TR>
+               <TD height=13 colspan="4"  align="center"><INPUT type="submit" value=" 添加 "> <INPUT type="reset" value=" 清除 " name=B2></TD>
+              </TR>
+  		  </TABLE>
+	</FORM>
+	</TD></TR></TABLE>
+</body>
+<script type="text/jscript">
+	function showCondition() {
+		var ea = document.getElementById("alternum");
+		var en = document.getElementById("num");
+		var info = document.getElementById("info");
+		
+		if(parseInt(en.value) > parseInt(ea.value)) {
+			info.innerHTML = "<font color = 'green'>正常</font>";
+			return false;
+		}
+		if(parseInt(en.value) == parseInt(ea.value)) {
+			info.innerHTML = "<font color = 'blue'>临界</font>";
+			return false;
+		}
+		if(parseInt(en.value) < parseInt(ea.value )&& parseInt(en.value) >0) {
+			info.innerHTML = "<font color = 'orange'>警示</font>";
+			return false;
+		}
+		if(parseInt(en.value) == 0) {
+			info.innerHTML = "<font color = 'red'>缺货</font>";
+			return false;
+		}
+	}
+
+</script>
+</html>

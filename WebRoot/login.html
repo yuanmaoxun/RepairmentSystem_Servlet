@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>login.html</title>
+	
+    <meta name="keywords" content="keyword1,keyword2,keyword3">
+    <meta name="description" content="this is my page">
+    <meta name="content-type" content="text/html; charset=UTF-8">
+    
+     <style type="text/css">
+#testWrap{
+	width:60px;
+	height:30px;
+	background-color:transparent;
+}
+
+.title{
+	float:left;
+	margin-top:10px;
+	padding:0 10px;
+	height:20px;
+	line-height:20px;
+	font-size:13px;
+	color:transparent;
+}
+.select{
+	background-color: transparent;
+	border: solid 0px;
+	color:#CCC;
+	border-radius:10px;
+	box-shadow: inset 3px 3px 6px #ccc;
+	-webkit-appearance: initial;
+}
+</style>
+   
+    
+	<script type="text/javascript">
+
+</script>
+		<script src="js/pace.min.js"></script>
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+		
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		
+	<!-- Shortcut icons And Apple touch icon -->
+		<link rel="shortcut icon" href="img/favicon.png" >
+		<link rel="apple-touch-icon" href="img/favicon.png" >
+		
+		<!-- Preloader CSS -->
+		<link rel="stylesheet" href="css/pace.css" >
+		
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		
+		<!-- Other Supportive CSS -->
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/animate.min.css">
+		<link rel="stylesheet" href="css/animation-delay.css">
+		<link rel="stylesheet" href="css/owl.carousel.css">
+		<link rel="stylesheet" href="css/owl.theme.css">
+		
+		<!-- Universal stylesheet (Shouldbe used with all pages) -->
+		<link rel="stylesheet" href="css/main.css">
+		
+		<!-- Custom CSS (color theme) < Editable > -->
+		<link rel="stylesheet" href="css/pages/single-portfolio.css">
+		
+		<!-- Custom CSS (color theme) < Editable > -->
+		<link rel="stylesheet" href="css/color-theme/portfolio/blue.css">
+		
+		<!-- CSS Only for demo delete in original vrsion -->
+		<link rel="stylesheet" href="css/demo.css">
+		<style type="text/css">
+		body,td,th {
+	font-size: 18px;
+	font-family: "华文行楷";
+}
+        </style>
+        
+  </head>
+   	<body data-spy="scroll" data-target=".navbar">
+	<div class="overlay"></div>
+
+	<div class="bg-wrapper"></div>
+	
+	<div class="layout full-width">
+		<section id="demo" class="demo affix hidden-xs sp">
+			<div class="container">
+				<div class="row">
+					<div class="handle">
+						<button type="button" class="btn btn-danger" data-toggle="style-switcher">
+							<span class="fa fa-cog fa-spin"></span>
+						</button>
+					</div>
+					<div class="styler well custom">
+						<span class="close fa fa-times"></span>
+						<h3 class="heading txt-xs">Color Themes</h3>
+						<div class="ul ul-xs"><span></span></div>
+						<div class="color-themes"></div>
+			
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="port-showcase" class="port-showcase">
+			<div class="wrapper" >
+				<div class="container head"  >
+					<div class="row text-right" >
+						<div class="head-content" style="box-shadow: inset 3px 3px 6px #ccc;border-radius:20px;left=400px;width=200px;">
+							<h3 class="heading inline txt-md">！ 欢迎登录</h3>
+							
+						</div>
+					</div>
+				</div>
+				<div class="container about-me"  style= "box-shadow: inset 3px 3px 10px #ccc;border-radius:20px;opacity:0.8;background-color:#333;height:260px; top:340px;left:80px;width:1100px; ">
+					<div class="row" >
+						<div class="col-md-6">
+							<img src="img/avatar.jpg" alt="user" class="img img-responsive img-circle img-profile" style="  height: 290px; width: 297px">
+						</div>
+						<div class="col-md-6">
+							<form name="form1" method="post" action="/RepairmentSystem/login" style="height: 253px; ">
+  		<table width="532" align="center">
+  			<tr style="height: 50px; width: 299px; ">
+
+  				<td height="54" style="height: 55px; "><input size="30" type="text" name="name" face="华文行楷" style= "color:#FFF;border-radius:10px;border:0px;background-color:transparent;box-shadow: inset 3px 3px 6px #ccc;" placeholder="用户名" /><font size="+2" face="华文行楷"></font></td>
+  			</tr>
+  			<tr>
+  				
+  				<td height="61" style="height: 43px; top:500px; "><input size="30" type="password" name="pwd"  face="华文行楷"  style= "color:#FFF;border-radius:10px;border:0px;background-color:transparent;box-shadow: inset 3px 3px 6px #ccc;" placeholder="密码" /><font size="+2" face="华文行楷"></font></td>
+  			</tr>
+  			 < tr>
+					
+					<td height="57" style="height: 51px; width: 294px"> 
+                    <div id="testWrap">
+					<!--select class="select"  onchange="changeRole()" name="type" >
+					<font size="+2">
+						<option>请选择</option>
+        				<option>客服</option>
+        				<option>任务调度</option>
+        				<option>维修人员</option>
+        				<option>库管</option>
+        				<option>管理员</option>
+        				</font>
+    				</select-->
+                    </div>
+    				</td>
+  			</tr>
+  			<tr>
+  				<td height="49" colspan="2" align="center" style="height: 50px; "><input class="select" size="20" type="submit" value="登录" style="margin-left:30px;"/></td>
+  			</tr>
+  		</table>
+  	</form>
+						
+<p>&nbsp;</p>
+							
+
+						  
+
+							<div class="text-center"></div>
+							
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</section>
+		<section id="port-contact" class="port-contact">
+			<div class="wrapper"></div>
+		</section>
+</div>
+
+	<script src="js/jquery-2.1.1.min.js"></script>
+		
+
+	<script src="js/bootstrap.min.js"></script>
+		
+
+	<script src="js/circles.min.js"></script>
+	<script src="js/waypoints.min.js"></script>
+	<script src="js/jquery.mixitup.min.js"></script>
+	<script src="js/jquery.countTo.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+		
+
+	<script src="js/main.js"></script>
+		
+
+	<script src="js/pages/single-portfolio.js"></script>
+
+	<script src="js/pages/single-portfolio-slideshow.js"></script>
+		
+	<script src="js/style-switcher.js"></script>
+	</body>
+</html>

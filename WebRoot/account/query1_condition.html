@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>queryConditionl.html</title>
+	
+    <meta name="keywords" content="keyword1,keyword2,keyword3">
+    <meta name="description" content="this is my page">
+    <meta name="content-type" content="text/html; charset=UTF-8">
+  </head>
+  
+  <body style="background-color:#d5e2e1">
+	<font color="#800000"></font> 
+	<br><form action="/RepairmentSystem/queryfinance" method="post" target="result">
+    	<table align="left" >
+    		<tr>
+            	<TD>结算单号：</TD>
+           	  <td><INPUT type="text" name="accno" value="" size="30" >&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                <td>缴费情况：</td>
+            	<td >
+            	<select name="acccondition">
+            		<option>请选择</option>
+                	<option>已交费</option>
+                    <option>未交费</option>
+                </select>
+                &nbsp;&nbsp;&nbsp;&nbsp;</td>
+                <TD>接机日期：</TD>
+			   <TD><INPUT type="Date" name="fixallocatetime" value="" size="30">&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+            </tr>
+    	</table>
+    </form>
+    <div align = "left"><button onclick="doQuery()">查询</button></div>
+  </body>
+  <script type = "text/javascript">
+  	function doQuery(){
+  		document.forms[0].submit();
+  	}
+  </script>
+</html>
